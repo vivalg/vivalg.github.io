@@ -1,13 +1,27 @@
 <html>
 <head>
 <title>index page</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/sql-generator.js"></script>
 <style>
 *,body{font-family: helvetica, arial, sans-serif;}
+.toolkit-div{border: 1px solid #EEE;margin: 5px 0px;padding: 10px;}
+.toolkit-div label{font-weight: bold;font-size: 20px;}
+.toolkit-div input,button{display: inline-block;height: 40px;font-size: 18px;}
 </style>
 </head>
 <body>
 <h1>index page</h1>
-<p>
-    This is a index page.
-</p>
+<div class="toolkit-div gen1">
+    <label>wrapper + siteParam</label><br/>
+    <input id="in1" type="text" style="width: 350px;">
+    <button>generate</button><br/>
+    <input type="text" style="font-size: 25px;width: 100%;text-shadow: 1px 1px 1px #888;border: none;"/>
+</div>
+<div class="toolkit-div gen2">
+    <label>linkage log</label><br/>
+    <input id="in2" type="text" style="width: 350px;">
+    <button>generate</button><br/>
+    <input type="text" style="font-size: 25px;width: 100%;text-shadow: 1px 1px 1px #888;border: none;"/>
+</div>
 </body>
