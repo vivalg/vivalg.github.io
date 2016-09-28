@@ -10,6 +10,7 @@ textarea{width: 90%;height: 30%;}
 h3,div{text-align: center;padding: 10px;}
 body,textarea,h1,div{font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;}
 </style>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
 var zhReg = /[\u4e00-\u9fa5]/;
 document.onreadystatechange=function(){
@@ -29,6 +30,11 @@ document.onreadystatechange=function(){
         document.getElementById('output').value = buf
     }
 }
+wx.onMenuShareAppMessage({
+    title: 'A Beijing Language Generator', 
+    desc: 'A Beijing Language Generator', 
+    link: 'http://vivalg.github.io/beijing-lang-gen.html', 
+});
 </script>
 </head>
 <body>
