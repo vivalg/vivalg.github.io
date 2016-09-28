@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>beijing-language-generator</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<style>
+html,body{height: 100%;margin: 0;padding: 20px 10px;}
+textarea{width: 90%;height: 5em;}
+h1,div{text-align: center}
+body,textarea,h1,div{font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;}
+</style>
+<script type="text/javascript">
+var zhReg = /[\u4e00-\u9fa5]/;
+document.onreadystatechange=function(){
+    if(document.readyState != 'complete'){
+        return
+    }
+    document.getElementById('gen').onclick=function(){
+        text = document.getElementById('input').value
+        var buf = '';
+        for( var i = 0; i < text.length; i++){
+            var ch = text.charAt(i);
+            if(zhReg.test(ch) && ch != '\u513f')
+                buf += ch + '\u513f';
+            else
+                buf += ch;
+        }
+        document.getElementById('output').value = buf
+    }
+}
+</script>
+</head>
+<body>
+	<h1>Beijing Language Generator</h1>
+    <div><textarea id="input"></textarea></div>
+	<div><button id='gen'>generate</button></div>
+    <div><textarea id="output"></textarea></div>
+</body>
+</html>
